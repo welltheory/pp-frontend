@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { icon as faIcon } from '@fortawesome/fontawesome-svg-core/import.macro'; // <-- import styles to be used
 import styles from './styles.modules.scss';
 
+
 const Icon = (props) => {
   const {
     size,
