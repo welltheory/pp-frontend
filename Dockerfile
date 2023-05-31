@@ -1,9 +1,6 @@
 FROM node:18 AS server
 ENV NODE_ENV=production
 ARG FA_TOKEN
-ARG HELLO
-RUN echo "Token: $FA_TOKEN"
-RUN echo "Hello: $HELLO"
 WORKDIR /app
 COPY package*.json /
 COPY . .
