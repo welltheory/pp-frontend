@@ -1,0 +1,28 @@
+.phone-number {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 3.5fr;
+  border-radius: 4px;
+  border: 1px solid $dark-color-200;
+  overflow: hidden;
+  &.phone-number--focused {
+    border-color: $primary-color-500;
+  }
+  [data-cy="mobile-prefix"] {
+    :global(.ant-select-selector) {
+      border-radius: 0;
+      border-width: 0!important;
+      background: $dark-color-100;
+    }
+    :global(.ant-select-selection-placeholder) {
+      color: $dark-color-400;
+    }
+  }
+  & > :global(.ant-input) {
+    border-radius: 0;
+    border-width: 0!important;
+    &:focus {
+      border-width: 0;
+    }
+  }
+}

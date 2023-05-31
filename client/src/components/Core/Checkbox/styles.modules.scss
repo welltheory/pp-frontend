@@ -1,0 +1,40 @@
+.checkbox {
+  position: relative;
+  &[data-value="false"] {
+  }
+  &[data-value="true"] {
+  }
+  [data-cy-icon="circle"] {
+    svg {
+      color: $dark-color-300;
+    }
+  }
+  [data-cy-icon="circle-check"] {
+    svg {
+      color: $primary-color-500;
+    }
+  }
+  // Sizes
+  &.checkbox--small {
+    svg {
+      font-size: 1rem;
+    }
+  }
+  &.checkbox--tiny {
+    svg {
+      font-size: 0.875rem;
+    }
+  }
+  // Types
+  &.checkbox--primary {
+    [data-cy-icon="circle-check"] svg {
+      color: $primary-color-500;
+    }
+  }
+  &.checkbox--secondary {
+    [data-cy-icon="circle-check"] svg {
+      color: $secondary-color-500;
+    }
+  }
+
+}

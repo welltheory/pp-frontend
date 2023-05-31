@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@app/*": ["./src/app/*"],
+      "@components/*": ["./src/components/*"],
+      "@config/*": ["./src/config/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@integrations/*": ["./src/integrations/*"],
+      "@hocs/*": ["./src/hocs/*"],
+      "@redux/*": ["./src/redux/*"],
+      "@router/*": ["./src/router/*"],
+      "@routes/*": ["./src/routes/*"],
+      "@schemas/*": ["./src/schemas/*"],
+      "@services/*": ["./src/services/*"],
+      "@setup/*": ["./src/setup/*"],
+      "@assets/*": ["./src/assets/*"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "public",
+    "build"
+  ]
+}

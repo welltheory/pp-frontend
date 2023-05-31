@@ -1,0 +1,17 @@
+.pagination {
+  display: flex;
+  :global {
+    .ant-pagination {
+      margin-left: auto;
+    }
+    .ant-pagination-item-active {
+      border-color: black;
+      a {
+        color: black;
+      }
+    }
+    li {
+      margin-bottom: 0;
+    }
+  }
+}

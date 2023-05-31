@@ -1,0 +1,70 @@
+.sections {
+  position: relative;
+}
+
+.section {
+  position: relative;
+  &.section--disabled {
+    cursor: not-allowed;
+    border-bottom: none;
+    .section__header,
+    .section__fields {
+      opacity: 0.05;
+    }
+  }
+  &.section--hidden {
+    display: none;
+  }
+  &__header {
+    padding-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
+    h5 {
+      font-weight: 700;
+      color: $dark-color-700;
+    }
+    p {
+      font-size: 0.9rem;
+      color: $dark-color-600;
+      line-height: 1.2;
+      width: 100%;
+      &:empty {
+        display: none;
+      }
+      @include media-sm {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Used when the section is disabled
+.disabled-overlay {
+  position: absolute;
+  border-radius: 2px;
+  z-index: 5;
+  background: rgba($dark-color-200, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: not-allowed;
+  h4 {
+    font-weight: 700;
+    color: $dark-color-400;
+  }
+  span {
+    color: $dark-color-400;
+    display: block;
+    max-width: 50%;
+    text-align: center;
+    &:empty {
+      display: none;
+    }
+    @include media-sm {
+      max-width: 75%;
+    }
+    @include media-xs {
+      max-width: 90%;
+    }
+  }
+}

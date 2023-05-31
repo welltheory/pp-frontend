@@ -1,0 +1,7 @@
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  :global(.ant-dropdown-trigger > button) {
+    padding: 0 8px!important;
+  }
+}

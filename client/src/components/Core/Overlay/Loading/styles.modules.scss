@@ -1,0 +1,29 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+  background: rgba($dark-color-100, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  h5, p {
+    text-align: center;
+  }
+  h5 {
+    margin-top: 1rem;
+  }
+  @include media-sm {
+    padding: 1rem;
+    h5 {
+      font-size: 1rem;
+    }
+    p {
+      font-size: 0.875rem;
+    }
+  }
+}

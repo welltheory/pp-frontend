@@ -1,0 +1,55 @@
+$vertical-padding: 1rem;
+$side-padding: 1rem;
+$vertical-padding-sm: 1rem;
+$side-padding-sm: 0.75rem;
+$vertical-padding-xs: 0.75rem;
+$side-padding-xs: 0.5rem;
+
+.form {
+  &.form--loading {
+    [data-cy="form-sections"] {
+      pointer-events: none!important;
+    }
+  }
+  &.form--default {
+    :global {
+      .ant-form-item-label label {
+        font-size: 14px;
+      }
+      .ant-form-item {
+        margin-bottom: 16px;
+      }
+    }
+  }
+  [data-cy="form-section"],
+  [data-cy="form-footer"] {
+    padding: $vertical-padding $side-padding;
+    @include media-sm {
+      padding: $vertical-padding-sm $side-padding-sm;
+    }
+    @include media-xs {
+      padding: $vertical-padding-xs $side-padding-xs;
+    }
+  }
+  [data-cy="form-section__disabled-overlay"] {
+    height: calc(100% - #{$vertical-padding});
+    width: calc(100% - #{$side-padding});
+    left: calc(#{$side-padding} / 2);
+    top: calc(#{$vertical-padding} / 2);
+    @include media-sm {
+      height: calc(100% - #{$vertical-padding-sm});
+      width: calc(100% - #{$side-padding-sm});
+      left: calc(#{$side-padding-sm} / 2);
+      top: calc(#{$vertical-padding-sm} / 2);
+    }
+    @include media-xs {
+      height: calc(100% - #{$vertical-padding-xs});
+      width: calc(100% - #{$side-padding-xs});
+      left: calc(#{$side-padding-xs} / 2);
+      top: calc(#{$vertical-padding-xs} / 2);
+    }
+  }
+  [data-cy="cleave"] input {
+    height: 60px;
+  }
+}

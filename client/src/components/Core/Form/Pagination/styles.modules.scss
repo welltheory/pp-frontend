@@ -1,0 +1,33 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 5;
+  .page {
+    $size: 12px;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    margin: 0px 4px!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: visible!important;
+    cursor: default!important;
+    pointer-events: none;
+    padding: 0!important;
+    &:empty {
+      display: block!important;
+    }
+    &.page--empty {
+      background-color: $dark-color-500;
+    }
+    &.page--active {
+      background-color: $primary-color-400;
+    }
+    &.page--filled {
+      background-color: $secondary-color-400;
+    }
+  }
+}

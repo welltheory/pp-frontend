@@ -1,0 +1,66 @@
+.card {
+  $radius: $base-radius;
+  $padding-side: 1.5rem;
+  $padding-side-sm: 1rem;
+  background-color: white;
+  border-radius: $radius;
+  display: flex;
+  flex-direction: column;
+  // box-shadow: $shadow-50;
+  box-shadow: none;
+  position: relative;
+  overflow: hidden;
+  &.card--padding-default {
+    .card__content {
+      padding: 1rem $padding-side;
+      @include media-sm {
+        padding: 1rem $padding-side-sm;
+      }
+    }
+  }
+  &__header {
+    padding: 1rem $padding-side;
+    border-bottom: 1px solid $dark-color-150;
+    display: flex;
+    align-items: center;
+    border-radius: $radius $radius 0 0;
+    position: relative;
+    h5 {
+      max-width: 100%;
+    }
+    @include media-sm {
+      padding: 1rem $padding-side-sm;
+    }
+    &__side {
+      margin-left: auto;
+    }
+  }
+  &__content {
+    overflow: hidden;
+    flex: 1;
+  }
+  &__footer {
+    padding: 1rem $padding-side;
+    background-color: $dark-color-100;
+    border-top: 1px solid $dark-color-150;
+    border-radius: 0 0 $radius $radius;
+    @include media-sm {
+      padding: 1rem $padding-side-sm;
+    }
+  }
+  .loader {
+    padding: 5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .spinner {
+      margin-bottom: 1rem;
+    }
+    > p {
+      text-align: center;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+  }
+}

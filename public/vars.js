@@ -1,0 +1,1 @@
+function injectVariables(){window.__ENVS__=Object.assign(window.__ENVS__,{REACT_APP_API_URL:"http://localhost:3030",REACT_APP_HELLO_WORLD:"Hello, world, fella!"})}injectVariables();

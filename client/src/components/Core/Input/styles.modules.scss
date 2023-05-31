@@ -1,0 +1,7 @@
+.input input {
+  border-radius: 50px;
+  box-shadow: none!important;
+  &::placeholder {
+    color: $dark-color-500;
+  }
+}

@@ -1,0 +1,91 @@
+.switch {
+  :global {
+    .ant-switch-handle:before {
+      border-radius: 50px;
+    }
+  }
+  &.switch--tiny {
+    $size: 12px;
+    $padding: 2px;
+    :global {
+      .ant-switch {
+        height: calc(#{$size} + (2 * #{$padding}));
+        min-width: calc((2.2 * #{$size}) + (2 * #{$padding}));
+        line-height: calc(#{$size} + #{$padding});
+      }
+      .ant-switch-checked .ant-switch-handle {
+        left: calc(100% - #{$size} - #{$padding});
+      }
+      .ant-switch-handle {
+        width: $size;
+        height: $size;
+        top: $padding;
+        left: $padding;
+        border-radius: 50%;
+      }
+    }
+  }
+  &.switch--small {
+    $size: 16px;
+    $padding: 2px;
+    :global {
+      .ant-switch {
+        height: calc(#{$size} + (2 * #{$padding}));
+        min-width: calc((2.2 * #{$size}) + (2 * #{$padding}));
+        line-height: calc(#{$size} + #{$padding});
+      }
+      .ant-switch-checked .ant-switch-handle {
+        left: calc(100% - #{$size} - #{$padding});
+      }
+      .ant-switch-handle {
+        width: $size;
+        height: $size;
+        top: $padding;
+        left: $padding;
+        border-radius: 50%;
+      }
+    }
+  }
+  &.switch--large {
+    $size: 22px;
+    $padding: 3px;
+    :global {
+      .ant-switch {
+        height: calc(#{$size} + (2 * #{$padding}));
+        min-width: calc((2.2 * #{$size}) + (2 * #{$padding}));
+        line-height: calc(#{$size} + #{$padding});
+      }
+      .ant-switch-checked .ant-switch-handle {
+        left: calc(100% - #{$size} - #{$padding});
+      }
+      .ant-switch-handle {
+        width: $size;
+        height: $size;
+        top: $padding;
+        left: $padding;
+        border-radius: 50%;
+      }
+    }
+  }
+  &.switch--xl {
+    $size: 26px;
+    $padding: 3px;
+    :global {
+      .ant-switch {
+        height: calc(#{$size} + (2 * #{$padding}));
+        min-width: calc((2.2 * #{$size}) + (2 * #{$padding}));
+        line-height: calc(#{$size} + #{$padding});
+      }
+      .ant-switch-checked .ant-switch-handle {
+        left: calc(100% - #{$size} - #{$padding});
+      }
+      .ant-switch-handle {
+        width: $size;
+        height: $size;
+        top: $padding;
+        left: $padding;
+        border-radius: 50%;
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.footer {
+  display: flex;
+  align-items: center;
+  [data-cy="cancel"] {
+    margin-right: auto;
+  }
+  [data-cy="primary"] {
+    flex-shrink: 1;
+    @include media-xs {
+      padding: 0.25rem 1rem!important;
+      font-size: 0.875rem!important;
+    }
+  }
+  [data-cy="back"] {
+    padding-left: 0.25rem!important;
+    padding-right: 0.25rem!important;
+    margin-right: 1rem!important;
+    margin-left: 1rem!important;
+    opacity: 0.6;
+    @include media-xs {
+      margin-left: 0.35rem!important;
+      margin-right: 0.35rem!important;
+    }
+    svg {
+      font-size: 0.875rem!important;
+    }
+  }
+  [data-cy="form-pagination"] {
+    margin-right: 1rem;
+    @include media-xs {
+      margin-right: 0;
+    }
+  }
+
+  .left {
+    display: flex;
+    align-items: center;
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  @include media-xs {
+    flex-direction: column-reverse;
+  }
+}

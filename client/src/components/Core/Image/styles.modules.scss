@@ -1,0 +1,28 @@
+.image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  &--loaded img {
+    opacity: 1!important;
+  }
+  &--fit-width {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &--fit-height {
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+  img {
+    object-fit: cover;
+    opacity: 0;
+    transition: all 400ms ease;
+    vertical-align: middle;
+    border: 0;
+    margin: 0;
+  }
+}

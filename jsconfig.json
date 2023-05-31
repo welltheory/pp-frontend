@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "$root/*": ["./*"],
+      "$config/*": ["./config/*"],
+      "$services/*": ["./services/*"],
+      "$utils/*": ["./utils/*"],
+      "$errors/*": ["./errors/*"]
+    }
+  }
+}

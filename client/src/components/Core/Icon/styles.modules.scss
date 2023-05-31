@@ -1,0 +1,75 @@
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &.icon--small {
+    svg {
+      font-size: 0.75rem;
+    }
+  }
+  &.icon--medium {
+    svg {
+      font-size: 1.25rem;
+    }
+  }
+  &.icon--large {
+    svg {
+      font-size: 2rem;
+    }
+  }
+  &.icon--circle {
+    border-style: solid;
+    border-radius: 50%;
+    box-sizing: content-box;
+    position: relative;
+    &.icon--small {
+      border-width: 3px;
+      padding: 0.35rem;
+      svg {
+        padding: 0.05rem;
+      }
+    }
+    &.icon--medium {
+      border-width: 4px;
+      padding: 0.5rem;
+      svg {
+        padding: 0.1rem;
+      }
+    }
+    &.icon--large {
+      border-width: 8px;
+      padding: 0.75rem;
+      svg {
+        padding: 0.15rem;
+      }
+    }
+    &.icon--circle-primary {
+      background-color: $primary-color-500;
+      border-color: $primary-color-150;
+      svg {
+        color: rgba(255, 255, 255, 0.9);
+      }
+    }
+    &.icon--circle-info {
+      background-color: rgba(69, 170, 242, 0.85);
+      border-color: rgb(220, 240, 255);
+      svg {
+        color: rgba(255, 255, 255, 0.9);
+      }
+    }
+    &.icon--circle-warning {
+      background-color: $warning-color-500;
+      border-color: $warning-color-300;
+      svg {
+        color: rgba(255, 255, 255, 0.9);
+      }
+    }
+    &.icon--circle-success {
+      background-color: $success-color-500;
+      border-color: $success-color-300;
+      svg {
+        color: rgba(255, 255, 255, 0.9);
+      }
+    }
+  }
+}

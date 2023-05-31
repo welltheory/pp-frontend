@@ -1,0 +1,600 @@
+body {
+  .button {
+    padding: 0;
+    border-radius: 4px;
+    transition: 250ms all ease-in-out;
+    box-shadow: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: auto;
+    line-height: initial;
+    &:empty,
+    a:empty {
+      display: none;
+    }
+    cursor: pointer;
+    &.button--hidden[type="button"]:global(.ant-btn) {
+      opacity: 0!important;
+      pointer-events: none!important;
+    }
+    &.button--rounded {
+      border-radius: 100px;
+    }
+    &.button--no-padding {
+      &:not(.button--is-link),
+      &.button--is-link a {
+        padding: 0!important;
+      }
+    }
+    &.button--tiny {
+      &:not(.button--is-link) {
+        padding: 0.15rem 0.75rem;
+      }
+      &.button--is-link a {
+        padding: 0.15rem 0.75rem;
+      }
+      &, a, span, [data-cy="icon"] svg {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+    &.button--small {
+      &:not(.button--is-link) {
+        padding: 0.25rem 1rem;
+      }
+      &.button--is-link a {
+        padding: 0.25rem 1rem;
+      }
+      &, a, span, [data-cy="icon"] svg {
+        font-weight: 600;
+        letter-spacing: 0.01em;
+        font-size: 14px;
+        line-height: 17px;
+      }
+    }
+    &.button--default,
+    &.button--medium {
+      &:not(.button--is-link) {
+        padding: 0.35rem 1.25rem;
+      }
+      &.button--is-link a {
+        padding: 0.35rem 1.25rem;
+      }
+      &, a, span, [data-cy="icon"] svg {
+        font-weight: 600;
+        letter-spacing: 0.01em;
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+    &.button--large {
+      &:not(.button--is-link) {
+        padding: 0.45rem 1.5rem;
+      }
+      &.button--is-link a {
+        padding: 0.45rem 1.5rem;
+      }
+      &, a, span, [data-cy="icon"] svg {
+        font-weight: 600;
+        letter-spacing: 0.01em;
+        font-size: 17px;
+        line-height: 23px;
+      }
+    }
+    &.button--xl {
+      &:not(.button--is-link) {
+        padding: 0.75rem 2.5rem;
+      }
+      &.button--is-link a {
+        padding: 0.75rem 2.5rem;
+      }
+      &, a, span {
+        font-weight: 700;
+        font-size: 23px;
+        line-height: 28px;
+      }
+    }
+    &.button--center {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    svg, span {
+      transition: 250ms all ease-in-out;
+    }
+    span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display: block;
+      letter-spacing: 1.5px;
+    }
+    // Styles
+    &.button--primary {
+      $color: $evergreen-color-00;
+      &.button--fill-full {
+        background-color: $color;
+        border: 2px solid transparent;
+        &, a, span, svg { color: white; }
+        &:hover, &:focus {
+          background-color: lighten($color, 7.5%);
+          &, a, span, svg {
+            color: white!important;
+          }
+        }
+      }
+      &.button--fill-outline {
+        border: 2px solid $color;
+        background-color: transparent;
+        &, a, span, svg { color: $color; }
+        &:hover, &:focus {
+          background-color: $color;
+          &, a, span, svg {
+            color: white!important;
+          }
+        }
+      }
+      &.button--fill-underscore {
+        border: 2px solid $color;
+        background-color: transparent;
+        border-radius: 0!important;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        padding-left: 0!important;
+        padding-right: 0!important;
+        &, a, span, svg { color: $color; }
+        &:hover, &:focus {
+          background-color: transparent;
+          &, a, span, svg {
+            color: lighten($color, 7.5%);
+            border-color: lighten($color, 7.5%);
+          }
+        }
+      }
+      &.button--fill-none {
+        border: 2px solid transparent;
+        background-color: transparent;
+        &, a, span, svg { color: $color; }
+        &:hover, &:focus {
+          background-color: transparent;
+          &, a, span, svg {
+            color: lighten($color, 7.5%)!important;
+          }
+        }
+      }
+      
+    }
+
+    &.button--secondary {
+      $color: $tomato-color-00;
+      &.button--fill-full {
+        background-color: $color;
+        border: 2px solid transparent;
+        &, a, span, svg { color: white; }
+        &:hover, &:focus {
+          background-color: lighten($color, 7.5%);
+          &, a, span, svg {
+            color: white!important;
+          }
+        }
+      }
+      &.button--fill-outline {
+        border: 2px solid $color;
+        background-color: transparent;
+        &, a, span, svg { color: $color; }
+        &:hover, &:focus {
+          background-color: $color;
+          &, a, span, svg {
+            color: white!important;
+          }
+        }
+      }
+      &.button--fill-underscore {
+        border: 2px solid $color;
+        background-color: transparent;
+        border-radius: 0!important;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        padding-left: 0!important;
+        padding-right: 0!important;
+        &, a, span, svg { color: $color; }
+        &:hover, &:focus {
+          background-color: transparent;
+        }
+      }
+      &.button--fill-none {
+        border: 2px solid transparent;
+        background-color: transparent;
+        &, a, span, svg { color: $color; }
+        &:hover, &:focus {
+          background-color: transparent;
+          &, a, span, svg {
+            color: darken($color, 7.5%)!important;
+          }
+        }
+      }
+    }
+
+    &.button--white {
+      $color: white;
+      &.button--fill-full {
+        background-color: $color;
+        border: 2px solid transparent;
+        &, a, span, svg { color: black; }
+        &:hover, &:focus {
+          background-color: lighten($color, 7.5%);
+          &, a, span, svg {
+            color: black!important;
+          }
+        }
+      }
+      &.button--fill-outline {
+        border: 2px solid $color;
+        background-color: transparent;
+        &, a, span, svg { color: $color; }
+        &:hover, &:focus {
+          background-color: $color;
+          &, a, span, svg {
+            color: black!important;
+          }
+        }
+      }
+      &.button--fill-underscore {
+        border: 2px solid $color;
+        background-color: transparent;
+        border-radius: 0!important;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        padding-left: 0!important;
+        padding-right: 0!important;
+        &, a, span, svg { color: $color; }
+        &:hover, &:focus {
+          background-color: transparent;
+        }
+      }
+      &.button--fill-none {
+        border: 2px solid transparent;
+        background-color: transparent;
+        &, a, span, svg { color: $color; }
+        &:hover, &:focus {
+          background-color: transparent;
+          &, a, span, svg {
+            color: darken($color, 7.5%)!important;
+          }
+        }
+      }
+    }
+
+    &.button--caution {
+      $color: $error-color-00;
+      &.button--fill-full {
+        background-color: $color;
+        border: 2px solid transparent;
+        &, a, span, svg { color: white; }
+        &:hover, &:focus {
+          background-color: lighten($color, 7.5%);
+          &, a, span, svg {
+            color: white!important;
+          }
+        }
+      }
+      &.button--fill-outline {
+        border: 2px solid $color;
+        background-color: transparent;
+        &, a, span, svg { color: $color; }
+        &:hover, &:focus {
+          background-color: $color;
+          &, a, span, svg {
+            color: white!important;
+          }
+        }
+      }
+      &.button--fill-underscore {
+        border: 2px solid $color;
+        background-color: transparent;
+        border-radius: 0!important;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        padding-left: 0!important;
+        padding-right: 0!important;
+        &, a, span, svg { color: $color; }
+        &:hover, &:focus {
+          background-color: transparent;
+        }
+      }
+      &.button--fill-none {
+        border: 2px solid transparent;
+        background-color: transparent;
+        &, a, span, svg { color: $color; }
+        &:hover, &:focus {
+          background-color: transparent;
+          &, a, span, svg {
+            color: darken($color, 7.5%)!important;
+          }
+        }
+      }
+    }
+
+    &.button--warning {
+      $color: $warning-color-00;
+      &.button--fill-full {
+        background-color: $color;
+        border: 2px solid transparent;
+        &, a, span, svg { color: black; }
+        &:hover, &:focus {
+          background-color: lighten($color, 7.5%);
+          &, a, span, svg {
+            color: black!important;
+          }
+        }
+      }
+      &.button--fill-outline {
+        border: 2px solid $color;
+        background-color: transparent;
+        &, a, span, svg { color: darken($color, 7.5%); }
+        &:hover, &:focus {
+          background-color: $color;
+          &, a, span, svg {
+            color: black!important;
+          }
+        }
+      }
+      &.button--fill-underscore {
+        border: 2px solid $color;
+        background-color: transparent;
+        border-radius: 0!important;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        padding-left: 0!important;
+        padding-right: 0!important;
+        &, a, span, svg { color: darken($color, 7.5%); }
+        &:hover, &:focus {
+          background-color: transparent;
+        }
+      }
+      &.button--fill-none {
+        border: 2px solid transparent;
+        background-color: transparent;
+        &, a, span, svg { color: darken($color, 7.5%); }
+        &:hover, &:focus {
+          background-color: transparent;
+          &, a, span, svg {
+            color: darken($color, 7.5%)!important;
+          }
+        }
+      }
+    }
+
+    &.button--success {
+      $color: $success-color-00;
+      &.button--fill-full {
+        background-color: $color;
+        border: 2px solid transparent;
+        &, a, span, svg { color: white; }
+        &:hover, &:focus {
+          background-color: lighten($color, 7.5%);
+          &, a, span, svg {
+            color: white!important;
+          }
+        }
+      }
+      &.button--fill-outline {
+        border: 2px solid $color;
+        background-color: transparent;
+        &, a, span, svg { color: $color; }
+        &:hover, &:focus {
+          background-color: $color;
+          &, a, span, svg {
+            color: white!important;
+          }
+        }
+      }
+      &.button--fill-underscore {
+        border: 2px solid $color;
+        background-color: transparent;
+        border-radius: 0!important;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        padding-left: 0!important;
+        padding-right: 0!important;
+        &, a, span, svg { color: $color; }
+        &:hover, &:focus {
+          background-color: transparent;
+        }
+      }
+      &.button--fill-none {
+        border: 2px solid transparent;
+        background-color: transparent;
+        &, a, span, svg { color: $color; }
+        &:hover, &:focus {
+          background-color: transparent;
+          &, a, span, svg {
+            color: darken($color, 7.5%)!important;
+          }
+        }
+      }
+    }
+
+    &.button--dark {
+      $color: $truffle-color-00;
+      &.button--fill-full {
+        background-color: $color;
+        border: 2px solid transparent;
+        &, a, span, svg { color: white; }
+        &:hover, &:focus {
+          background-color: lighten($color, 7.5%);
+          &, a, span, svg {
+            color: white!important;
+          }
+        }
+      }
+      &.button--fill-outline {
+        border: 2px solid $color;
+        background-color: transparent;
+        &, a, span, svg { color: $color; }
+        &:hover, &:focus {
+          background-color: $color;
+          &, a, span, svg {
+            color: white!important;
+          }
+        }
+      }
+      &.button--fill-underscore {
+        border: 2px solid $color;
+        background-color: transparent;
+        border-radius: 0!important;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        padding-left: 0!important;
+        padding-right: 0!important;
+        &, a, span, svg { color: $color; }
+        &:hover, &:focus {
+          background-color: transparent;
+        }
+      }
+      &.button--fill-none {
+        border: 2px solid transparent;
+        background-color: transparent!important;
+        &, a, span, svg { color: $color; }
+        &:hover, &:focus {
+          background-color: transparent;
+          &, a, span, svg {
+            color: darken($color, 7.5%)!important;
+          }
+        }
+      }
+    }
+
+    &.button--black {
+      $color: $dark-color-700;
+      &.button--fill-full {
+        background-color: $color;
+        border: 2px solid transparent;
+        &, a, span, svg { color: white; }
+        &:hover, &:focus {
+          background-color: lighten($color, 7.5%);
+          &, a, span, svg {
+            color: white!important;
+          }
+        }
+      }
+      &.button--fill-outline {
+        border: 2px solid $color;
+        background-color: transparent;
+        &, a, span, svg { color: $color; }
+        &:hover, &:focus {
+          background-color: $color;
+          &, a, span, svg {
+            color: white!important;
+          }
+        }
+      }
+      &.button--fill-underscore {
+        border: 2px solid $color;
+        background-color: transparent;
+        border-radius: 0!important;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        padding-left: 0!important;
+        padding-right: 0!important;
+        &, a, span, svg { color: $color; }
+        &:hover, &:focus {
+          background-color: transparent;
+        }
+      }
+      &.button--fill-none {
+        border: 2px solid transparent;
+        background-color: transparent!important;
+        &, a, span, svg { color: $color; }
+        &:hover, &:focus {
+          background-color: transparent;
+          &, a, span, svg {
+            color: darken($color, 7.5%)!important;
+          }
+        }
+      }
+    }
+
+    &.button--disabled:disabled {
+      opacity: 0.4!important;
+      &, a, :global(.tooltip-wrapper) {
+        cursor: not-allowed!important;
+      }
+      &:not(.button--fill-none):not(.button--link):not(.button--fill-underscore) {
+        border-color: #d8d8d8!important;
+        background-color: #d8d8d8!important;
+      }
+      &.button--fill-underscore {
+        border-bottom-color: #d8d8d8!important;
+      }
+      &, a, span, svg { 
+        &, &:hover {
+          color: rgba(0, 0, 0, 0.2)!important;
+        }
+      }
+      :global(.tooltip-wrapper) {
+        pointer-events: all!important;
+      }
+    }
+    &.button--link {
+      $color: $primary-color-500;
+      background-color: transparent;
+      box-shadow: none;
+      border: none;
+      margin: 0;
+      padding: 0!important;
+      &, a, span, svg {
+        color: $color;
+        font-weight: 400;
+      }
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        &, a, span, svg {
+          color: $primary-color-500;
+        }
+      }
+    }
+    &.button--blank {
+      background-color: transparent;
+      box-shadow: none;
+      border: none;
+      margin: 0;
+      padding: 0;
+      &:hover,
+      &:focus {
+        &, svg {
+          color: $primary-color-500;
+        }
+      }
+    }
+    // Modifiers:
+    &.button--is-link {
+      border: none;
+      outline: none;
+      a {
+        display: block;
+      }
+      &.button--blank {
+        text-align: left;
+      }
+      &:hover, &:focus a {
+        color: lighten($secondary-color-500, 5%)!important;
+      }
+    }
+  }
+
+
+
+}

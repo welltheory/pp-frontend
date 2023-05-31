@@ -1,0 +1,54 @@
+.progress-bar {
+  display: flex;
+  align-items: center;
+  p[data-cy="prefix"],
+  p[data-cy="suffix"] {
+    font-size: 0.75rem;
+    color: $evergreen-color-00;
+    font-weight: 400;
+    flex-shrink: 0;
+  }
+  p[data-cy="prefix"] {
+    margin-right: 0.5rem;
+    color: $evergreen-color-00;
+  }
+  p[data-cy="suffix"] {
+    margin-left: 0.5rem;
+  }
+  &.progress-bar--large {
+    p[data-cy="prefix"] {
+      font-size: 14px;
+      line-height: 16px;
+    }
+    :global {
+      .ant-progress-bg {
+        height: 16px!important;
+      }
+    }
+  }
+  :global {
+    .ant-progress {
+      position: relative;
+      top: -1px;
+      margin: 0;
+    }
+    .ant-progress-inner {
+      background-color: white;
+    }
+    .ant-progress-bg {
+      background-color: $primary-color-500;
+    }
+    .ant-progress-status-success .ant-progress-bg {
+      background-color: $secondary-color-500;
+    }
+    .ant-progress-text {
+      font-size: 0.75rem;
+      color: $dark-color-600;
+      font-weight: 700;
+    }
+    .anticon-circle-check svg {
+      color: $secondary-color-500;
+      position: relative;
+    }
+  }
+}

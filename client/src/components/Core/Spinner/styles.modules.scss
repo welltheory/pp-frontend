@@ -1,0 +1,47 @@
+.spinner {
+  text-align: center;
+  span {
+    font-size: 1.3rem;
+    color: rgba(0, 0, 0, 0.3);
+    font-weight: 500;
+  }
+  &.spinner--full-screen {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+    &, path, circle {
+      stroke: $primary-color-500!important;
+    }
+    circle {
+      opacity: 0.4;
+    }
+  }
+  &.circle--full-screen {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.bloom {
+  .lottie {
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #e4e2dc;
+    box-shadow: $shadow-50;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  > p {
+    text-align: center;
+    font-size: 1.15rem;
+    color: rgba(0, 0, 0, 0.3);
+    font-weight: 500;
+    margin-top: 0.75rem;
+  }
+}

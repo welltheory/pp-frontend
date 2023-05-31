@@ -1,0 +1,104 @@
+.table {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: white;
+
+
+  .body {
+    > div {
+      height: 100%;
+    }
+    :global {
+      .ant-table-wrapper,
+      .ant-spin-nested-loading,
+      .ant-spin-container,
+      .ant-table,
+      .ant-table-container {
+        height: 100%;
+      }
+      .ant-table-container {
+        display: flex;
+        flex-direction: column;
+        .ant-table-header {
+          flex-shrink: 0;
+        }
+        .ant-table-body {
+          flex-grow: 1;
+        }
+      }
+    }
+  }
+
+  &.table--hide-pagination {
+    :global(.ant-pagination-prev),
+    :global(.ant-pagination-item),
+    :global(.ant-pagination-next),
+    :global(.ant-pagination-options),
+    :global([class*="ant-pagination-jump"]) {
+      display: none;
+    }
+  }
+  .header {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid $dark-color-200;
+    .search {
+      flex-grow: 1;
+      input {
+        border: 1px solid $dark-color-200;
+        border-radius: 50px 0 0 50px;
+        box-shadow: none!important;
+        &:focus {
+          border-color: black;
+        }
+      }
+      :global(.ant-input-group-addon) {
+        &, button {
+          border-radius: 0 50px 50px 0!important;
+        }
+        button {
+          border-color: $dark-color-200!important;
+        }
+      }
+    }
+    .actions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-left: 1rem;
+      &:empty {
+        display: none;
+      }
+    }
+  }
+  .body {
+    flex-grow: 1;
+    overflow: hidden;
+  }
+  .footer {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    background: $dark-color-100;
+    padding: 0.5rem 1rem;
+    .pagination :global(.ant-pagination-total-text), 
+    .total {
+      font-weight: 600;
+      color: $dark-color-500;
+      font-size: 0.75rem;
+    }
+    .pagination {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-left: auto;
+    }
+    .total {
+      margin-left: auto;
+      padding: 0.75rem 0;
+    }
+  }
+}

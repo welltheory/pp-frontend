@@ -1,0 +1,21 @@
+.container {
+  max-width: 1920px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+  background-color: transparent;
+  &--min-width {
+    min-width: 960px;
+  }
+  @include media-sm {
+    width: 95%;
+  }
+  @include media-xs {
+    width: 95%;
+  }
+  &.container--full-on-mobile {
+    @include media-xs {
+      width: 98%!important;
+    }
+  }
+}

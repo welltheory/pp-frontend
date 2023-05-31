@@ -1,0 +1,118 @@
+.menu {
+  &.menu--inline {
+    display: flex;
+    overflow: hidden;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    :global(.ant-menu-item) {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 0 0.75rem 0 0.5rem!important;
+      &:after {
+        display: none!important;
+      }
+      a {
+        svg, span {
+          font-size: 1rem;
+        }
+      }
+      @include media-xs {
+        padding: 0.5rem!important;
+        height: unset;
+        .icon-wrapper {
+          margin-right: 0;
+          width: auto;
+          margin-bottom: 0.5rem;
+        }
+        a {
+          flex-direction: column;
+          svg {
+            font-size: 0.675rem;
+          }
+          span {
+            font-size: 0.825rem;
+            line-height: 1;
+          }
+        }
+      }
+    }
+  }
+  :global(.ant-menu-item) {
+    flex-shrink: 0;
+    width: auto!important;
+    a {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.icon {
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 0;
+  margin-right: 8px;
+}
+
+.item {
+  span, button, a, svg {
+    transition: 300ms all ease;
+  }
+  &:not(.item--type-danger),
+  &:not(.item--type-success),
+  &:not(.item--disabled) {
+    &, a, button {
+      font-size: 1.1rem;
+      &:hover,
+      &:hover span,
+      &:hover a,
+      &:hover svg {
+        color: $primary-color-500!important;
+      }
+    }
+    &:hover {
+      background-color: $dark-color-175;
+    }
+  }
+  &.item--active {
+    background-color: $primary-color-100;
+    a, svg, span {
+      color: $primary-color-500;
+    }
+  }
+  &.item--type-danger:not(.item--disabled) {
+    background: $error-color-50;
+    span, svg {
+      color: $error-color-400;
+    }
+    &:hover, &.item--active {
+      background: $error-color-100;
+      span, svg {
+        color: $error-color-600!important;
+      }
+    }
+  }
+  &.item--type-success:not(.item--disabled) {
+    background: $success-color-150;
+    span, svg {
+      color: $success-color-700;
+    }
+    &:hover, &.item--active {
+      background: $success-color-175;
+      span, svg {
+        color: $success-color-600!important;
+      }
+    }
+  }
+  &.item--disabled {
+    &, * {
+      cursor: not-allowed!important;
+    }
+    span, svg {
+      opacity: 0.6;
+    }
+  }
+}

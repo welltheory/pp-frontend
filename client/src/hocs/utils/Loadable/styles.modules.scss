@@ -1,0 +1,24 @@
+.section {
+  position: relative;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  @include media-sm {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+  min-height: calc(100vh - #{$footer_height} - #{$header_height});
+  @media (min-height: 820px) {
+    min-height: 820px!important;
+  }
+}
+
+
+.loader {
+  text-align: center;
+  display: block;
+  font-weight: 700;
+  font-size: 1.2rem;
+  opacity: 0.5;
+  color: black;
+  padding-top: 2rem;
+}

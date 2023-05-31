@@ -1,0 +1,44 @@
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  div {
+    transition: unset
+  }
+  &.wrapper--not-ready {
+    [data-cy="spinner"] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: white;
+      z-index: 1000;
+    }
+  }
+  &.wrapper--children-hidden .form {
+    opacity: 0;
+    margin-bottom: -32px;
+  }
+}
+
+.loader {
+  padding: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  transition: 300ms all ease!important;
+  opacity: 0;
+  margin-bottom: -16px;
+  &.form--hidden {
+    display: none;
+  }
+  &.form--revealed {
+    opacity: 1;
+    margin-bottom: 0;
+  }
+  @include media-sm {
+    flex-wrap: wrap;
+  }
+}

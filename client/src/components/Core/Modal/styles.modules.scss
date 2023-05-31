@@ -1,0 +1,27 @@
+.modal {
+  &:not([class*="padding-"]) {
+    :global(.ant-modal-content) {
+      padding: 0!important;
+    }
+  }
+  :global(.ant-modal-content) {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  :global(.anticon-close svg) {
+    color: $dark-color-600;
+  }
+  :global(.ant-modal-header) {
+    background: $dark-color-100;
+  }
+  :global(.ant-modal-close-x) {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      font-size: 0.75rem;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.link {
+  color: $primary-color-600;
+  &:hover {
+    &, span {
+      color: lighten($primary-color-600, 10%);
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.mobile-prefix {
+  min-width: 72px;
+  position: relative;
+  z-index: 25;
+  background: white;
+  :global {
+    .ant-select-selection-item,
+    .ant-select-selection-placeholder {
+      text-align: center;
+      line-height: 34px;
+    }
+  }
+}
